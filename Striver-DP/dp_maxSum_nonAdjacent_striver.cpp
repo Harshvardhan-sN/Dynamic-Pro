@@ -34,17 +34,17 @@ int main(){
 
     // **************** Second Approach *********************
 
-    int prev = v1[0];
-    int prev2 = 0;
+    int previous = v1[0];
+    int previous2 = 0;
     for(int i=1;i<n;i++){
         int take = v1[i];
-        if(i>1) take+=prev2;
-        int notTake = prev;
+        if(i>1) take+=previous2;
+        int notTake = previous;
         int current = max(take,notTake);
-        prev2 = prev;
-        prev = current;
+        previous2 = previous;
+        previous = current;
     }
-    cout<<prev<<endl;
+    cout<<previous<<endl;
 
 
 
